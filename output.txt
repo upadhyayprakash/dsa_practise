@@ -1,0 +1,7 @@
+### Recursion Basic Problems ###
+
+Enter number: 
+Original Vector: 
+1 2 3 4 5 
+Reversed Array: 
+5 4 3 2 1 
