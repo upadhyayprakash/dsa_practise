@@ -108,6 +108,19 @@ void reverseArray(int arr[], int left, int right)
     reverseArray(arr, ++left, --right);
 }
 
+void reverseArraySingleParameter(int arr[], int n, int i)
+{
+    // Base Condition
+    if (i >= n / 2)
+        return;
+
+    // Task
+    swap(arr[i], arr[n - i - 1]);
+
+    // Recursive Call
+    reverseArraySingleParameter(arr, n, ++i);
+}
+
 void reverseVectorByIterator(vector<int>::iterator start, vector<int>::iterator end)
 {
     // Eg. Input: {1,2,3,4,5}
@@ -139,35 +152,41 @@ int main()
     // cout << "Factorial of n: " << factorial(n) << endl;
 
     /* Reversing an Array by Recursion */
-    // int arr[] = {1,2,3,4,5,6};
-    // int arrLength = (sizeof(arr)/sizeof(*arr));
+
+    // int arr[] = {1, 2, 3, 4, 5, 6};
+    // int arrLength = (sizeof(arr) / sizeof(*arr));
 
     // cout << "\nOriginal Array: " << endl;
-    // for(int i = 0; i < arrLength; i++) {
+    // for (int i = 0; i < arrLength; i++)
+    // {
     //     cout << arr[i] << " ";
     // }
     // cout << "\nReversed Array: " << endl;
-    // reverseArray(arr, 0, arrLength-1);
-    // for(int i = 0; i < arrLength; i++) {
+
+    // // reverseArray(arr, 0, arrLength - 1);
+    // reverseArraySingleParameter(arr, arrLength, 0);
+
+    // for (int i = 0; i < arrLength; i++)
+    // {
     //     cout << arr[i] << " ";
     // }
 
     /* Reversing a Vector array by Recursion */
-    vector<int> vec = {1, 2, 3, 4, 5};
+    // vector<int> vec = {1, 2, 3, 4, 5};
 
-    cout << "\nOriginal Vector: " << endl;
-    for (int i : vec)
-    {
-        cout << i << " ";
-    }
+    // cout << "\nOriginal Vector: " << endl;
+    // for (int i : vec)
+    // {
+    //     cout << i << " ";
+    // }
 
-    reverseVectorByIterator(vec.begin(), vec.end() - 1);
+    // reverseVectorByIterator(vec.begin(), vec.end() - 1);
 
-    cout << "\nReversed Array: " << endl;
-    for (int i : vec)
-    {
-        cout << i << " ";
-    }
+    // cout << "\nReversed Array: " << endl;
+    // for (int i : vec)
+    // {
+    //     cout << i << " ";
+    // }
 
     return 0;
 }
