@@ -136,6 +136,12 @@ void reverseVectorByIterator(vector<int>::iterator start, vector<int>::iterator 
     reverseVectorByIterator(++start, --end);
 }
 
+int fibonacci(int n) { // Time Complexity: 2^n --> Exponential (bad for fibonacci)
+    if(n <= 1)
+        return n;
+    return (fibonacci(n-1) + fibonacci(n-2));
+}
+
 int main()
 {
     // Write C++ code here
@@ -187,6 +193,9 @@ int main()
     // {
     //     cout << i << " ";
     // }
+
+    /* Fibonacci using Recursion */
+    cout << "Fibonacci of n: " << fibonacci(n) << endl;
 
     return 0;
 }
