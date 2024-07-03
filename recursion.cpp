@@ -267,11 +267,10 @@ bool printFirstSubSequenceWithTargetSum(int i, vector<int> &printArr, int arr[],
     return false; // this will ensure that recursion continues.
 }
 
-int getCountSubSequenceWithTargetSum(int i, vector<int> &printArr, int arr[], int sum, int targetSum, int n) {
+int getCountSubSequenceWithTargetSum(int i, int arr[], int sum, int targetSum, int n) {
     // Base condition
     if(i == n) {
         if(sum == targetSum){
-            // printIntArr(printArr); // Use it for debugging the 'count'. This will print the sub-sequence.
             return 1;
         }
             
@@ -279,13 +278,11 @@ int getCountSubSequenceWithTargetSum(int i, vector<int> &printArr, int arr[], in
     }
 
     // Task and Recursive Calls
-    printArr.push_back(arr[i]);
     sum += arr[i];
-    int l = getCountSubSequenceWithTargetSum(i+1, printArr, arr, sum, targetSum, n); // Recursive call with 'pick' ele
+    int l = getCountSubSequenceWithTargetSum(i+1, arr, sum, targetSum, n); // Recursive call with 'pick' ele
 
-    printArr.pop_back();
     sum -= arr[i];
-    int r = getCountSubSequenceWithTargetSum(i+1, printArr, arr, sum, targetSum, n); // Recursive call with 'not-pick' ele
+    int r = getCountSubSequenceWithTargetSum(i+1, arr, sum, targetSum, n); // Recursive call with 'not-pick' ele
 
     return (l+r);
 }
@@ -384,8 +381,7 @@ int main()
         cout << i << " ";
     }
 
-    vector<int> printArrVec3;
-    cout << "\nCount of Sequences with sum " << targetSum3 << ": \n" << getCountSubSequenceWithTargetSum(0, printArrVec3, arrSeq3, 0, targetSum3, arrSeqLength3) << endl;
+    cout << "\nCount of Sequences with sum " << targetSum3 << ": \n" << getCountSubSequenceWithTargetSum(0, arrSeq3, 0, targetSum3, arrSeqLength3) << endl;
 
     return 0;
 }
