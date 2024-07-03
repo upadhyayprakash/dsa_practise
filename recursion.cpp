@@ -194,6 +194,81 @@ void printSubSequence(int i, vector<int> &printArr, int arr[], int n) {
     */
 }
 
+
+/**
+ * Function to print sub-sequence within given array, whose elements add up to targetSum
+ * @param i: index of current element
+ * @param printArr: vector used to store sub-sequence at given instance
+ * @param arr: input array of elements
+ * @param sum: sum of current printArr elements
+ * @param targetSum: target sum for the sub-sequence
+ * @param n: size of given input array
+ * 
+ * Approach:
+ * - Idea is to create all possible sub-sequence combinations and then match every
+ * combination's sum with targetSum.
+ * - Apart from what we did in previous method, we also add & subtract 'ele' from the 'sum' variable
+ * based on current recursive call.
+ */
+void printSubSequenceWithTargetSum(int i, vector<int> &printArr, int arr[], int sum, int targetSum, int n) {
+    // Base Condition
+    if(i == n) {
+        if(sum == targetSum) {
+            printIntArr(printArr);
+        }
+        return;
+    }
+    
+    // Task and Recursive Call
+    printArr.push_back(arr[i]); // add an element
+    sum += arr[i];
+    printSubSequenceWithTargetSum(i+1, printArr, arr, sum, targetSum, n);
+    printArr.pop_back(); // remove the added element
+    sum -= arr[i];
+    printSubSequenceWithTargetSum(i+1, printArr, arr, sum, targetSum, n);
+}
+
+/**
+ * Function to print 'FIRST' sub-sequence with 'targetSum'.
+ * 
+ * @param i: index of current element
+ * @param printArr: vector used to store sub-sequence at given instance
+ * @param arr: input array of elements
+ * @param sum: sum of current printArr elements
+ * @param targetSum: target sum for the sub-sequence
+ * @param n: size of given input array
+ * 
+ * Approach:
+ * - Difference from previous approach is, that we need to avoid future recursion call, as soon as our first sub-sequence is found.
+ * - We can return a boolean flag from any specific recursion node and use that flag to avoid calling further recursions. This flag
+ * will eventually go back to the top of recursion tree and exit the method.
+ */
+bool printFirstSubSequenceWithTargetSum(int i, vector<int> &printArr, int arr[], int sum, int targetSum, int n) {
+    // Base Condition
+    if(i == n) {
+        if(sum == targetSum) {
+            printIntArr(printArr);
+            return true;
+        }
+        return false;
+    }
+    
+    // Task and Recursive Call
+    printArr.push_back(arr[i]); // add an element
+    sum += arr[i];
+    if(printFirstSubSequenceWithTargetSum(i+1, printArr, arr, sum, targetSum, n) == true)
+        return true;
+    
+    printArr.pop_back(); // remove the added element
+    sum -= arr[i];
+    if(printFirstSubSequenceWithTargetSum(i+1, printArr, arr, sum, targetSum, n) == true)
+        return true;
+        
+    return false; // this will ensure that recursion continues.
+}
+
+
+
 int main()
 {
     // Write C++ code here
@@ -252,15 +327,29 @@ int main()
 
     /* Print Subsequences of a given array */
 
-    int arrSeq[] = {2,4,6};
-    int arrSeqLength = sizeof(arrSeq) / sizeof(*arrSeq);
-    cout << "Given Vector array: (size: " << arrSeqLength << ")" << endl;
-    for(auto i: arrSeq) {
+    // int arrSeq[] = {2,4,6};
+    // int arrSeqLength = sizeof(arrSeq) / sizeof(*arrSeq);
+    // cout << "Given Vector array: (size: " << arrSeqLength << ")" << endl;
+    // for(auto i: arrSeq) {
+    //     cout << i << " ";
+    // }
+    // cout << "\n\nSubsequence of the array: " << endl;
+    // vector<int> printArrVec;
+    // printSubSequence(0, printArrVec, arrSeq, arrSeqLength);
+
+    /* Print subsequence with Target Sum */
+    
+    int arrSeq2[] = {2, 4, 6, 1, 3};
+    int arrSeqLength2 = sizeof(arrSeq2) / sizeof(*arrSeq2);
+    int targetSum = 5;
+    cout << "Given Vector array: (size: " << arrSeqLength2 << ")" << endl;
+    for(auto i: arrSeq2) {
         cout << i << " ";
     }
     cout << "\n\nSubsequence of the array: " << endl;
-    vector<int> printArrVec;
-    printSubSequence(0, printArrVec, arrSeq, arrSeqLength);
+    vector<int> printArrVec2;
+    // printSubSequenceWithTargetSum(0, printArrVec2, arrSeq2, 0, targetSum, arrSeqLength2);
+    printFirstSubSequenceWithTargetSum(0, printArrVec2, arrSeq2, 0, targetSum, arrSeqLength2);
 
     return 0;
 }
