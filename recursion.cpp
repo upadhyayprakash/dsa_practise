@@ -142,7 +142,7 @@ int fibonacci(int n) { // Time Complexity: 2^n --> Exponential (bad for fibonacc
     return (fibonacci(n-1) + fibonacci(n-2));
 }
 
-void printIntArr(vector<int> arr) {
+void printIntArr(vector<int> &arr) {
     if(!arr.size()) {
         cout << "{}";
     }
@@ -163,19 +163,35 @@ void printIntArr(vector<int> arr) {
  * 
  * @return prints the printArr when i >= n
  */
-void printSubSequence(int i, vector<int> printArr, int arr[], int n) {
+void printSubSequence(int i, vector<int> &printArr, int arr[], int n) {
+    /*
+    Time Complexity: O(n x 2^n) (n is for printing and 2^n for recursive calls)
+    Space Complexity: O(n) (n is the depth of recursive tree, hence auxilliary space)
+    */
     // Base Condition
-    if(i >= n) {
+    if(i == n) {
         printIntArr(printArr);
         return;
     }
 
     // Task and Recursive Calls
 
-    printArr.push_back(arr[i]); // add element to array
+    printArr.push_back(arr[i]); // add 'ele' to array
     printSubSequence(i+1, printArr, arr, n);
-    printArr.pop_back(); // remove element from array
+    printArr.pop_back(); // remove element from array, so the 'ele' is not added to subsequence
     printSubSequence(i+1, printArr, arr, n);
+
+    /*
+    You can also print the subsequence in reverse order by shifting the 2nd recursive call before adding 'ele' to 'printArr'.
+    Eg.
+    printSubSequence(i+1, printArr, arr, n);
+    
+    printArr.push_back(arr[i]); // add 'ele' to array
+    printSubSequence(i+1, printArr, arr, n);
+    
+    printArr.pop_back(); // remove element from array, so the 'ele' is not added to subsequence
+    
+    */
 }
 
 int main()
@@ -243,7 +259,8 @@ int main()
         cout << i << " ";
     }
     cout << "\n\nSubsequence of the array: " << endl;
-    printSubSequence(0, {}, arrSeq, arrSeqLength);
+    vector<int> printArrVec;
+    printSubSequence(0, printArrVec, arrSeq, arrSeqLength);
 
     return 0;
 }
