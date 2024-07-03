@@ -142,13 +142,50 @@ int fibonacci(int n) { // Time Complexity: 2^n --> Exponential (bad for fibonacc
     return (fibonacci(n-1) + fibonacci(n-2));
 }
 
+void printIntArr(vector<int> arr) {
+    if(!arr.size()) {
+        cout << "{}";
+    }
+    for(auto i: arr) {
+        cout << i << " ";
+    }
+    cout << endl;
+    return;
+}
+
+
+/**
+ * A function to print all subsequence within a given array. A.k.a all permutations of the array.
+ * @param i: index
+ * @param printArr: subsequence array to be printed
+ * @param arr: original array
+ * @param n: size of original array
+ * 
+ * @return prints the printArr when i >= n
+ */
+void printSubSequence(int i, vector<int> printArr, int arr[], int n) {
+    // Base Condition
+    if(i >= n) {
+        printIntArr(printArr);
+        return;
+    }
+
+    // Task and Recursive Calls
+
+    printArr.push_back(arr[i]); // add element to array
+    printSubSequence(i+1, printArr, arr, n);
+    printArr.pop_back(); // remove element from array
+    printSubSequence(i+1, printArr, arr, n);
+}
+
 int main()
 {
     // Write C++ code here
     cout << "### Recursion Basic Problems ###" << endl;
-    cout << "\nEnter number: ";
-    int n;
-    cin >> n;
+    /* Take Input as 'n' */
+    // cout << "\nEnter number: ";
+    // int n;
+    // cin >> n;
     // printNTimes(1, n, "Prakash");
     // print1ToN(1, n);
     // printNTo1(n);
@@ -195,7 +232,18 @@ int main()
     // }
 
     /* Fibonacci using Recursion */
-    cout << "Fibonacci of n: " << fibonacci(n) << endl;
+    // cout << "Fibonacci of n: " << fibonacci(n) << endl;
+
+    /* Print Subsequences of a given array */
+
+    int arrSeq[] = {2,4,6};
+    int arrSeqLength = sizeof(arrSeq) / sizeof(*arrSeq);
+    cout << "Given Vector array: (size: " << arrSeqLength << ")" << endl;
+    for(auto i: arrSeq) {
+        cout << i << " ";
+    }
+    cout << "\n\nSubsequence of the array: " << endl;
+    printSubSequence(0, {}, arrSeq, arrSeqLength);
 
     return 0;
 }

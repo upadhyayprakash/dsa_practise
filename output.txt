@@ -1,3 +1,13 @@
 ### Recursion Basic Problems ###
+Given Vector array: (size: 3)
+2 4 6 
 
-Enter number: Fibonacci of n: 8
+Subsequence of the array: 
+2 4 6 
+2 4 
+2 6 
+2 
+4 6 
+4 
+6 
+{}
