@@ -267,6 +267,29 @@ bool printFirstSubSequenceWithTargetSum(int i, vector<int> &printArr, int arr[],
     return false; // this will ensure that recursion continues.
 }
 
+int getCountSubSequenceWithTargetSum(int i, vector<int> &printArr, int arr[], int sum, int targetSum, int n) {
+    // Base condition
+    if(i == n) {
+        if(sum == targetSum){
+            // printIntArr(printArr); // Use it for debugging the 'count'. This will print the sub-sequence.
+            return 1;
+        }
+            
+        return 0;
+    }
+
+    // Task and Recursive Calls
+    printArr.push_back(arr[i]);
+    sum += arr[i];
+    int l = getCountSubSequenceWithTargetSum(i+1, printArr, arr, sum, targetSum, n); // Recursive call with 'pick' ele
+
+    printArr.pop_back();
+    sum -= arr[i];
+    int r = getCountSubSequenceWithTargetSum(i+1, printArr, arr, sum, targetSum, n); // Recursive call with 'not-pick' ele
+
+    return (l+r);
+}
+
 
 
 int main()
@@ -337,19 +360,32 @@ int main()
     // vector<int> printArrVec;
     // printSubSequence(0, printArrVec, arrSeq, arrSeqLength);
 
-    /* Print subsequence with Target Sum */
+    // /* Print subsequence with Target Sum */
     
-    int arrSeq2[] = {2, 4, 6, 1, 3};
-    int arrSeqLength2 = sizeof(arrSeq2) / sizeof(*arrSeq2);
-    int targetSum = 5;
-    cout << "Given Vector array: (size: " << arrSeqLength2 << ")" << endl;
-    for(auto i: arrSeq2) {
+    // int arrSeq2[] = {2, 4, 6, 1, 3};
+    // int arrSeqLength2 = sizeof(arrSeq2) / sizeof(*arrSeq2);
+    // int targetSum = 5;
+    // cout << "Given Vector array: (size: " << arrSeqLength2 << ")" << endl;
+    // for(auto i: arrSeq2) {
+    //     cout << i << " ";
+    // }
+    // cout << "\n\nSubsequence of the array: " << endl;
+    // vector<int> printArrVec2;
+    // // printSubSequenceWithTargetSum(0, printArrVec2, arrSeq2, 0, targetSum, arrSeqLength2);
+    // printFirstSubSequenceWithTargetSum(0, printArrVec2, arrSeq2, 0, targetSum, arrSeqLength2);
+
+    /* Print COUNT of sub-sequences where sum of its elements is 'targetSum' */
+
+    int arrSeq3[] = {1,2,3,1};
+    int arrSeqLength3 = sizeof(arrSeq3) / sizeof(*arrSeq3);
+    int targetSum3 = 5;
+    cout << "Given Vector array: (size: " << arrSeqLength3 << ")" << endl;
+    for(auto i: arrSeq3) {
         cout << i << " ";
     }
-    cout << "\n\nSubsequence of the array: " << endl;
-    vector<int> printArrVec2;
-    // printSubSequenceWithTargetSum(0, printArrVec2, arrSeq2, 0, targetSum, arrSeqLength2);
-    printFirstSubSequenceWithTargetSum(0, printArrVec2, arrSeq2, 0, targetSum, arrSeqLength2);
+
+    vector<int> printArrVec3;
+    cout << "\nCount of Sequences with sum " << targetSum3 << ": \n" << getCountSubSequenceWithTargetSum(0, printArrVec3, arrSeq3, 0, targetSum3, arrSeqLength3) << endl;
 
     return 0;
 }

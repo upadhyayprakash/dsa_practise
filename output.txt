@@ -1,6 +1,5 @@
 ### Recursion Basic Problems ###
-Given Vector array: (size: 5)
-2 4 6 1 3 
-
-Subsequence of the array: 
-2 3 
+Given Vector array: (size: 4)
+1 2 3 1 
+Count of Sequences with sum 5: 
+2

@@ -25,4 +25,6 @@
     3. print ONLY first sub-sequence with target 'sum'
         Learn: How to avoid future recursion calls, basically return bool.
         URL: https://www.youtube.com/watch?v=eQCS_v3bw0Q&t=688s
+    4. print COUNT of sub-sequence with target 'sum'
+        Learn: return count of success with multiple recursive calls or recursion in Loop.
     
