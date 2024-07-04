@@ -1,0 +1,4 @@
+Array elements: 
+1 3 0 100 12 -4 9 
+Sorted Array (Bubble Sort): 
+-4 0 1 3 9 12 100 
