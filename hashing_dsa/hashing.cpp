@@ -62,7 +62,7 @@ void map_counter_int() { // For integers
     int size;
     cin >> size;
     int arr[size];
-    map<int, int> freqArr; // frequency array declaration
+    unordered_map<int, int> freqArr; // frequency array declaration. can use 'map' also.
     for(int i = 0; i < size; i++) {
         cin >> arr[i];
         freqArr[arr[i]]++;
@@ -91,9 +91,48 @@ void map_counter_int() { // For integers
 
 }
 
+void counter_min_max_freq_ele() {
+    // Take array input and hash its elements into a map
+    int size;
+    cin >> size;
+    int arr[size];
+
+    map<int, int> freqArr;
+
+    for(int i = 0; i < size; i++) {
+        cin >> arr[i];
+        freqArr[arr[i]]++;
+        cout << arr[i] << " ";
+    }
+
+    cout << endl;
+
+    // Print map with hashed elements
+    int minEle = freqArr.begin()->first;
+    int minValue = freqArr.begin()->second;
+    int maxEle = freqArr.begin()->first;
+    int maxValue = freqArr.begin()->second;
+    
+    for(auto i: freqArr) {
+        cout << i.first << " -> " << i.second << endl;
+        if(i.second < minValue) {
+            minValue = i.second;
+            minEle = i.first;
+        }
+        if(i.second > maxValue) {
+            maxValue = i.second;
+            maxEle = i.first;
+        }
+    }
+
+    cout << "Min freq. ele -> " << minEle << endl;
+    cout << "Max freq. ele -> " << maxEle << endl;
+}
+
 int main() {
     // basic_hash_counter_int();
-    basic_hash_counter_char();
+    // basic_hash_counter_char();
     // map_counter_int();
+    counter_min_max_freq_ele();
     return 0;
 }
