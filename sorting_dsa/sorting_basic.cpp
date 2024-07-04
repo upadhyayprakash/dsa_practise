@@ -5,7 +5,7 @@ using namespace std;
 /**
  * Approach: Select minimum from unsorted array (i+1 till n) and swap with 'i'th element.
  */
-void selection_sort() {
+void selection_sort() { // Time Complexity: O(n^2) for all cases.
     int size;
     cin >> size;
     int arr[size];
@@ -17,7 +17,7 @@ void selection_sort() {
     cout << endl;
 
     // Sort Logic
-    for(int i = 0; i < size; i++) {
+    for(int i = 0; i < size-1; i++) { // 'size-' as last ele is already sorted.
         int minIdx = i;
         for(int j = i+1; j < size; j++) {
             if(arr[j] < arr[minIdx]) {
@@ -44,7 +44,7 @@ void selection_sort() {
  * right position in sorted array by shifting other sorted elements
  * to the right.
  */
-void insertion_sort() {
+void insertion_sort() { // Time Complexity: O(n) -> Worst & Avg case. O(n) -> Best case.
     // Take array input
     int size;
     cin >> size;
@@ -73,7 +73,11 @@ void insertion_sort() {
     }
 }
 
-void bubble_sort() {
+
+/**
+ * Approach: Push the 'max' element to right-most by adjacent elements swapping.
+ */
+void bubble_sort() { // Time Complexity: O(n^2) -> Avg & Worst case. O(n) -> Best Case (Already sorted array)
     // Take array input
     int size;
     cin >> size;
@@ -107,7 +111,7 @@ void bubble_sort() {
 
 int main() {
     // selection_sort();
-    // insertion_sort();
-    bubble_sort();
+    insertion_sort();
+    // bubble_sort();
     return 0;
 }
