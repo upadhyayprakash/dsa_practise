@@ -1,4 +1,5 @@
-Array elements: 
+Input array:
 1 3 0 100 12 -4 9 
-Sorted Array (Insertion Sort): 
+
+Sorted Array:
 -4 0 1 3 9 12 100 
