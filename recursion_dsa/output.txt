@@ -1,5 +1,217 @@
-### Recursion Basic Problems ###
-Given Vector array: (size: 4)
-1 2 3 1 
-Count of Sequences with sum 5: 
-2
+Input Array: 2 100 7 6 9 13 
+Target: 13
+
+Arguments =====
+idx=0, target=13, ds={}
+Arguments =====
+idx=0, target=11, ds=2 
+Arguments =====
+idx=0, target=9, ds=2 2 
+Arguments =====
+idx=0, target=7, ds=2 2 2 
+Arguments =====
+idx=0, target=5, ds=2 2 2 2 
+Arguments =====
+idx=0, target=3, ds=2 2 2 2 2 
+Arguments =====
+idx=0, target=1, ds=2 2 2 2 2 2 
+Arguments =====
+idx=1, target=1, ds=2 2 2 2 2 2 
+Arguments =====
+idx=2, target=1, ds=2 2 2 2 2 2 
+Arguments =====
+idx=3, target=1, ds=2 2 2 2 2 2 
+Arguments =====
+idx=4, target=1, ds=2 2 2 2 2 2 
+Arguments =====
+idx=5, target=1, ds=2 2 2 2 2 2 
+Arguments =====
+idx=6, target=1, ds=2 2 2 2 2 2 
+Arguments =====
+idx=1, target=3, ds=2 2 2 2 2 
+Arguments =====
+idx=2, target=3, ds=2 2 2 2 2 
+Arguments =====
+idx=3, target=3, ds=2 2 2 2 2 
+Arguments =====
+idx=4, target=3, ds=2 2 2 2 2 
+Arguments =====
+idx=5, target=3, ds=2 2 2 2 2 
+Arguments =====
+idx=6, target=3, ds=2 2 2 2 2 
+Arguments =====
+idx=1, target=5, ds=2 2 2 2 
+Arguments =====
+idx=2, target=5, ds=2 2 2 2 
+Arguments =====
+idx=3, target=5, ds=2 2 2 2 
+Arguments =====
+idx=4, target=5, ds=2 2 2 2 
+Arguments =====
+idx=5, target=5, ds=2 2 2 2 
+Arguments =====
+idx=6, target=5, ds=2 2 2 2 
+Arguments =====
+idx=1, target=7, ds=2 2 2 
+Arguments =====
+idx=2, target=7, ds=2 2 2 
+Arguments =====
+idx=2, target=0, ds=2 2 2 7 
+Arguments =====
+idx=3, target=0, ds=2 2 2 7 
+Arguments =====
+idx=4, target=0, ds=2 2 2 7 
+Arguments =====
+idx=5, target=0, ds=2 2 2 7 
+Arguments =====
+idx=6, target=0, ds=2 2 2 7 
+Arguments =====
+idx=3, target=7, ds=2 2 2 
+Arguments =====
+idx=3, target=1, ds=2 2 2 6 
+Arguments =====
+idx=4, target=1, ds=2 2 2 6 
+Arguments =====
+idx=5, target=1, ds=2 2 2 6 
+Arguments =====
+idx=6, target=1, ds=2 2 2 6 
+Arguments =====
+idx=4, target=7, ds=2 2 2 
+Arguments =====
+idx=5, target=7, ds=2 2 2 
+Arguments =====
+idx=6, target=7, ds=2 2 2 
+Arguments =====
+idx=1, target=9, ds=2 2 
+Arguments =====
+idx=2, target=9, ds=2 2 
+Arguments =====
+idx=2, target=2, ds=2 2 7 
+Arguments =====
+idx=3, target=2, ds=2 2 7 
+Arguments =====
+idx=4, target=2, ds=2 2 7 
+Arguments =====
+idx=5, target=2, ds=2 2 7 
+Arguments =====
+idx=6, target=2, ds=2 2 7 
+Arguments =====
+idx=3, target=9, ds=2 2 
+Arguments =====
+idx=3, target=3, ds=2 2 6 
+Arguments =====
+idx=4, target=3, ds=2 2 6 
+Arguments =====
+idx=5, target=3, ds=2 2 6 
+Arguments =====
+idx=6, target=3, ds=2 2 6 
+Arguments =====
+idx=4, target=9, ds=2 2 
+Arguments =====
+idx=4, target=0, ds=2 2 9 
+Arguments =====
+idx=5, target=0, ds=2 2 9 
+Arguments =====
+idx=6, target=0, ds=2 2 9 
+Arguments =====
+idx=5, target=9, ds=2 2 
+Arguments =====
+idx=6, target=9, ds=2 2 
+Arguments =====
+idx=1, target=11, ds=2 
+Arguments =====
+idx=2, target=11, ds=2 
+Arguments =====
+idx=2, target=4, ds=2 7 
+Arguments =====
+idx=3, target=4, ds=2 7 
+Arguments =====
+idx=4, target=4, ds=2 7 
+Arguments =====
+idx=5, target=4, ds=2 7 
+Arguments =====
+idx=6, target=4, ds=2 7 
+Arguments =====
+idx=3, target=11, ds=2 
+Arguments =====
+idx=3, target=5, ds=2 6 
+Arguments =====
+idx=4, target=5, ds=2 6 
+Arguments =====
+idx=5, target=5, ds=2 6 
+Arguments =====
+idx=6, target=5, ds=2 6 
+Arguments =====
+idx=4, target=11, ds=2 
+Arguments =====
+idx=4, target=2, ds=2 9 
+Arguments =====
+idx=5, target=2, ds=2 9 
+Arguments =====
+idx=6, target=2, ds=2 9 
+Arguments =====
+idx=5, target=11, ds=2 
+Arguments =====
+idx=6, target=11, ds=2 
+Arguments =====
+idx=1, target=13, ds={}
+Arguments =====
+idx=2, target=13, ds={}
+Arguments =====
+idx=2, target=6, ds=7 
+Arguments =====
+idx=3, target=6, ds=7 
+Arguments =====
+idx=3, target=0, ds=7 6 
+Arguments =====
+idx=4, target=0, ds=7 6 
+Arguments =====
+idx=5, target=0, ds=7 6 
+Arguments =====
+idx=6, target=0, ds=7 6 
+Arguments =====
+idx=4, target=6, ds=7 
+Arguments =====
+idx=5, target=6, ds=7 
+Arguments =====
+idx=6, target=6, ds=7 
+Arguments =====
+idx=3, target=13, ds={}
+Arguments =====
+idx=3, target=7, ds=6 
+Arguments =====
+idx=3, target=1, ds=6 6 
+Arguments =====
+idx=4, target=1, ds=6 6 
+Arguments =====
+idx=5, target=1, ds=6 6 
+Arguments =====
+idx=6, target=1, ds=6 6 
+Arguments =====
+idx=4, target=7, ds=6 
+Arguments =====
+idx=5, target=7, ds=6 
+Arguments =====
+idx=6, target=7, ds=6 
+Arguments =====
+idx=4, target=13, ds={}
+Arguments =====
+idx=4, target=4, ds=9 
+Arguments =====
+idx=5, target=4, ds=9 
+Arguments =====
+idx=6, target=4, ds=9 
+Arguments =====
+idx=5, target=13, ds={}
+Arguments =====
+idx=5, target=0, ds=13 
+Arguments =====
+idx=6, target=0, ds=13 
+Arguments =====
+idx=6, target=13, ds={}
+
+Valid Combinations: 
+1-> 2 2 2 7 
+2-> 2 2 9 
+3-> 7 6 
+4-> 13 

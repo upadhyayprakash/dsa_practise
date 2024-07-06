@@ -14,6 +14,47 @@
 - Recursion Tree: The hierarchy of function calling itself and returning after each function's completion, is called Recursion Tree.
 - Stack Space: the Callstack size it takes to run the complete recursion program.
 
+# Combination Sum:
+- In these problems, we are given a candidate array (distinct elements) and asked to find all combinations (array of arrays) of its elements (repeatations allowed) that sum to a 'target' value.
+
+## Approach
+- It's similar to sub-sequence technique, where we start with 'pick' or 'not pick' for each elements and then append next elements in recursion by following same 'pick' and 'not pick' technique.
+
+- The difference here is, we're allowed to take repeat elements to build the 'target' value.
+
+- For detailed pseudocode refer the `pseudo_code - combination_sum_1.md` file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Revision Problems:
 ## Recursion:
 - Sub-sequence:
