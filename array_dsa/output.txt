@@ -1,4 +1,5 @@
-Second Largest: 5
-Second Smallest: 2
 
-# of Unique elements: 4
+Original array:
+1 2 3 4 5 6 7 
+Rotated array by 3 spaces:
+4 5 6 7 1 2 3 

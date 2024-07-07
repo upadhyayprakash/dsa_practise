@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 int get_2nd_largest(vector<int> &arr, int n) {
@@ -56,21 +57,81 @@ int remove_duplicate_get_unique_count(vector<int> &arr, int n) {
     return k+1;
 }
 
+/**
+ * Rotate an array left by 'd' positions
+ * 
+ * 1. Worst Approach: O(d x N)
+ * 
+ * 
+ * 2. Brute-force approach would be to store 1st 'd' elements in temporary array and  move others to left
+ * and then push temp array content to end of original array.
+ * 
+ * 3. In optimal approach, we'd reverse the two sub-array split by 'd' position and then reverse the entire
+ * array to get the result.
+ */
+void rotate_array_by_d_spaces_worst_approach(vector<int> &arr, int n, int d) { // Time Complexity: O(d x n)
+    int i = 1;
+    int temp;
+    while(i <= d) { // run for '3' times
+        temp = arr[d-i];
+        for(int j = d-i+1; j < n-i+1; j++) {
+            arr[j-1] = arr[j];
+        }
+        arr[n-i] = temp;
+        i++;
+    }
+}
+
+void rotate_array_by_d_spaces_optimal(vector<int> &arr, int n, int d) { // Time Complexity: O(d x n)
+    /*
+    Input:
+    Eg. [1,2,3,4,5,6,7];
+    d = 3
+
+    Approach:
+    Reverse: arr(0, d-1) -> [3,2,1]
+    Reverse: arr(d, n-1) -> [7,6,5,4]
+    Combine: [3,2,1,7,6,5,4]
+    Reverse: [4,5,6,7,1,2,3]
+    */
+
+   reverse(arr, arr+d);
+   reverse(arr+d, arr+n);
+   reverse(arr, arr+n);
+}
+
 int main() {
     /* Second Largest and Smallest in array */
-    vector<int> arr = {1,2,4,7,7,5};
+    // vector<int> arr = {1,2,4,7,7,5};
 
-    vector<int> result = get_second_largest_smallest(arr, arr.size());
+    // vector<int> result = get_second_largest_smallest(arr, arr.size());
     
-    cout << "Second Largest: " << result[0] << endl;
-    cout << "Second Smallest: " << result[1] << endl;
+    // cout << "Second Largest: " << result[0] << endl;
+    // cout << "Second Smallest: " << result[1] << endl;
     
-    cout << endl;
+    // cout << endl;
 
     /* Remove duplicates in sorted array (in-place), and return # of unique elements */
-    vector<int> arr2 = {1,1,2,2,2,3,3};
-    int result2 = remove_duplicate_get_unique_count(arr2, arr2.size());
-    cout << "# of Unique elements: " << result2 << endl;
+    // vector<int> arr2 = {1,1,2,2,2,3,3};
+    // int result2 = remove_duplicate_get_unique_count(arr2, arr2.size());
+    // cout << "# of Unique elements: " << result2 << endl;
+
+    /* Rotate array by 'd' positions */
+    vector<int> arr3 = {1,2,3,4,5,6,7};
+    int d = 3;
+    int rotations = d % arr3.size();
+    cout << "\nOriginal array:" << endl;
+    for(auto i: arr3) {
+        cout << i << " ";
+    }
+
+    rotate_array_by_d_spaces_worst_approach(arr3, arr3.size(), rotations);
+
+    cout << "\nRotated array by " << rotations << " spaces:" << endl;
+    for(auto i: arr3) {
+        cout << i << " ";
+    }
+
 
     return 0;
 }
