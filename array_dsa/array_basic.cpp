@@ -38,6 +38,24 @@ vector<int> get_second_largest_smallest(vector<int> &arr, int n) {
     return {secLargest, secSmallest};
 }
 
+int remove_duplicate_get_unique_count(vector<int> &arr, int n) {
+    /**
+     * Brute-force approach would be to use a 'Set' data structure to push each element
+     * and then replace those unique set elements in the original array and return set size.
+     * 
+     * In Optimal approach, we'll use "two-pointer" to track the recent unique ele and an iterator.
+     */
+    int k = 0;
+    for(int i = 0; i < n; i++) {
+        if(arr[i] != arr[k]) {
+            arr[k+1] = arr[i];
+            k++;
+        }
+    }
+
+    return k+1;
+}
+
 int main() {
     /* Second Largest and Smallest in array */
     vector<int> arr = {1,2,4,7,7,5};
@@ -47,6 +65,12 @@ int main() {
     cout << "Second Largest: " << result[0] << endl;
     cout << "Second Smallest: " << result[1] << endl;
     
-    
+    cout << endl;
+
+    /* Remove duplicates in sorted array (in-place), and return # of unique elements */
+    vector<int> arr2 = {1,1,2,2,2,3,3};
+    int result2 = remove_duplicate_get_unique_count(arr2, arr2.size());
+    cout << "# of Unique elements: " << result2 << endl;
+
     return 0;
 }
