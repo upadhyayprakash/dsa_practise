@@ -69,20 +69,7 @@ int remove_duplicate_get_unique_count(vector<int> &arr, int n) {
  * 3. In optimal approach, we'd reverse the two sub-array split by 'd' position and then reverse the entire
  * array to get the result.
  */
-void rotate_array_by_d_spaces_worst_approach(vector<int> &arr, int n, int d) { // Time Complexity: O(d x n)
-    int i = 1;
-    int temp;
-    while(i <= d) { // run for '3' times
-        temp = arr[d-i];
-        for(int j = d-i+1; j < n-i+1; j++) {
-            arr[j-1] = arr[j];
-        }
-        arr[n-i] = temp;
-        i++;
-    }
-}
-
-void rotate_array_by_d_spaces_optimal(vector<int> &arr, int n, int d) { // Time Complexity: O(d x n)
+void rotate_array_by_d_spaces_optimal(int arr[], int n, int d) { // Time Complexity: O(d x n)
     /*
     Input:
     Eg. [1,2,3,4,5,6,7];
@@ -117,15 +104,16 @@ int main() {
     // cout << "# of Unique elements: " << result2 << endl;
 
     /* Rotate array by 'd' positions */
-    vector<int> arr3 = {1,2,3,4,5,6,7};
+    int arr3[] = {1,2,3,4,5,6,7};
+    int size3 = (sizeof(arr3)/sizeof(*arr3));
     int d = 3;
-    int rotations = d % arr3.size();
+    int rotations = d % size3;
     cout << "\nOriginal array:" << endl;
     for(auto i: arr3) {
         cout << i << " ";
     }
 
-    rotate_array_by_d_spaces_worst_approach(arr3, arr3.size(), rotations);
+    rotate_array_by_d_spaces_optimal(arr3, size3, rotations);
 
     cout << "\nRotated array by " << rotations << " spaces:" << endl;
     for(auto i: arr3) {
