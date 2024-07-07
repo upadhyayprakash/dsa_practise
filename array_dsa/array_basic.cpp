@@ -87,6 +87,36 @@ void rotate_array_by_d_spaces_optimal(int arr[], int n, int d) { // Time Complex
    reverse(arr, arr+n);
 }
 
+/**
+ * Move all zero elements to the end of array.
+ * 
+ * Brute-force approach is to create a temp array and store all the non-zero
+ * elements in it, and then insert that array at the beginning of 'arr'. Later,
+ * make all the remaining elements as '0'.
+ * 
+ * Optimal Approach:
+ * - We'll use 2-pointer to swap the non-zero occurrences with zeroes in the array.
+ */
+
+void move_zeroes_to_end_optimal(vector<int> &arr, int n) {
+    // Find the 1st zero element and track it.
+    int zeroEleIdx = -1;
+    for(int i = 0; i < n; i++) {
+        if(arr[i] == 0) {
+            zeroEleIdx = i;
+            break;
+        }
+    }
+
+    // Traverse further elements and swap zero with them
+    for(int i = zeroEleIdx + 1; i < n; i++) {
+        if(arr[i] != 0) {
+            swap(arr[i], arr[zeroEleIdx]);
+            zeroEleIdx++;
+        }
+    }
+}
+
 int main() {
     /* Second Largest and Smallest in array */
     // vector<int> arr = {1,2,4,7,7,5};
@@ -104,22 +134,34 @@ int main() {
     // cout << "# of Unique elements: " << result2 << endl;
 
     /* Rotate array by 'd' positions */
-    int arr3[] = {1,2,3,4,5,6,7};
-    int size3 = (sizeof(arr3)/sizeof(*arr3));
-    int d = 3;
-    int rotations = d % size3;
-    cout << "\nOriginal array:" << endl;
-    for(auto i: arr3) {
+    // int arr3[] = {1,2,3,4,5,6,7};
+    // int size3 = (sizeof(arr3)/sizeof(*arr3));
+    // int d = 3;
+    // int rotations = d % size3;
+    // cout << "\nOriginal array:" << endl;
+    // for(auto i: arr3) {
+    //     cout << i << " ";
+    // }
+
+    // rotate_array_by_d_spaces_optimal(arr3, size3, rotations);
+
+    // cout << "\nRotated array by " << rotations << " spaces:" << endl;
+    // for(auto i: arr3) {
+    //     cout << i << " ";
+    // }
+
+    /* Move all zeros to the end */
+    vector<int> arr4 = {0,1,0,4,0,0,7,13,0,5};
+    cout << "Original Array:" << endl;
+    for(auto i: arr4) {
         cout << i << " ";
     }
-
-    rotate_array_by_d_spaces_optimal(arr3, size3, rotations);
-
-    cout << "\nRotated array by " << rotations << " spaces:" << endl;
-    for(auto i: arr3) {
+    cout << endl;
+    move_zeroes_to_end_optimal(arr4, arr4.size());
+    cout << "Processed Array:" << endl;
+    for(auto i: arr4) {
         cout << i << " ";
     }
-
 
     return 0;
 }
