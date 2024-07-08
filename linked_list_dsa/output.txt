@@ -1,36 +1,4 @@
-<empty>
-
-Print LinkedList: 
-<empty>
-
-Length: 
-Length: 0
-0
-
-Element 3 exist? 0
-Delete head:
-Can't delete, <empty> list
-<empty>
-
-Delete tail:
-Can't delete, <empty> list
-<empty>
-
-Delete at Position 2:
-Can't delete, <empty> list
-<empty>
-
-Delete by value 5:
-Can't delete, <empty> list
-<empty>
-
-Insert before head:
-12 -> 
-Insert after tail:
-12 -> 98 -> 
-Insert 55 at Position 3:
-
-Length: 2
-12 -> 98 -> 55 -> 
-Insert before the given value: 5:
-12 -> 98 -> 54 -> 55 -> 
+Doubly Linked List
+1 <-> 2 <-> 3 <-> 4 <-> 5 <-> 
+Reversed List:
+5 <-> 4 <-> 3 <-> 2 <-> 1 <-> 

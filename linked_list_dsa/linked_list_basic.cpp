@@ -1,3 +1,4 @@
+/* Linked List */
 #include <iostream>
 using namespace std;
 
@@ -20,7 +21,7 @@ class Node {
 };
 
 Node* arrToLL(vector<int> &arr) {
-    if(arr.size() == 0) return (Node*)nullptr;
+    if(arr.size() == 0) return nullptr;
 
     Node* head = new Node(arr[0]);
     Node* mover = head;
@@ -33,8 +34,10 @@ Node* arrToLL(vector<int> &arr) {
 }
 
 void print_linked_list(Node* head) {
-    if(!head)
+    if(!head) {
         cout << "<empty>" << endl;
+        return;
+    }
     
     Node* temp = head;
     while(temp) {
