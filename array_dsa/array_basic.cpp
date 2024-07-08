@@ -92,10 +92,11 @@ void rotate_array_by_d_spaces_optimal(int arr[], int n, int d) { // Time Complex
  * 
  * Brute-force approach is to create a temp array and store all the non-zero
  * elements in it, and then insert that array at the beginning of 'arr'. Later,
- * make all the remaining elements as '0'.
+ * make all the remaining elements as '0'. It has Space Complexity: O(N)
  * 
  * Optimal Approach:
  * - We'll use 2-pointer to swap the non-zero occurrences with zeroes in the array.
+ * - Constant Space Complexity: O(1)
  */
 
 void move_zeroes_to_end_optimal(vector<int> &arr, int n) {
@@ -116,6 +117,85 @@ void move_zeroes_to_end_optimal(vector<int> &arr, int n) {
         }
     }
 }
+
+
+/**
+ * Get UNION of two 'sorted' arrays
+ * 
+ * Brute-force approach would be to use a 'Set' data structure to store every element from
+ * given two arrays, and then copy the set to another "result<int>" vector.
+ * 
+ * Optimal: Use two pointer
+ */
+vector<int> union_of_2_arrays(vector<int> arr1, int n1, vector<int> arr2, int n2) {
+    /*
+    Input:
+        arr1: [1,1,2,3,4,5]
+        arr2: [2,3,4,4,5,6]
+    */
+
+    int i, j;
+    i = j = 0;
+    vector<int> result;
+
+    while(i < n1 && j < n2) {
+        if(arr1[i] <= arr2[j]) {
+            if(result.size() == 0 || result.back() != arr1[i])
+                result.push_back(arr1[i]); // result: [1]
+            i++;
+        }
+        else {
+            if(result.size() == 0 || result.back() != arr2[j])
+                result.push_back(arr2[j]);
+            j++;
+        }
+    }
+
+    while(i < n1) {
+        if(result.size() == 0 || result.back() != arr1[i])
+            result.push_back(arr1[i]);
+        i++;
+    }
+
+    while(j < n2) {
+        if(result.size() == 0 ||result.back() != arr2[j])
+            result.push_back(arr2[j]);
+        j++;
+    }
+
+    return result;
+}
+
+
+/**
+ * Intersection of two 'sorted' arrays. Intersection result array can contain duplicate value if it's common
+ * betweeen two arrays
+ */
+vector<int> intersection_of_2_arrays(vector<int> a, int n1, vector<int> b, int n2) {
+    /*
+    Approach:
+    Input:
+        arr1: {1,2,2,3,3,4,5,6};
+        arr2: {2,3,3,5,6,6,7};
+    */
+
+    int i = 0, j = 0;
+    vector<int> result;
+    while(i < n1 && j < n2) {
+        if(a[i] == b[j]) {
+            result.push_back(a[i]);
+            i++;
+            j++;
+        } else if(a[i] <= b[j]) {
+            i++;
+        } else {
+            j++;
+        }
+    }
+
+    return result;
+}
+
 
 int main() {
     /* Second Largest and Smallest in array */
@@ -151,17 +231,47 @@ int main() {
     // }
 
     /* Move all zeros to the end */
-    vector<int> arr4 = {0,1,0,4,0,0,7,13,0,5};
-    cout << "Original Array:" << endl;
-    for(auto i: arr4) {
+    // vector<int> arr4 = {0,1,0,4,0,0,7,13,0,5};
+    // cout << "Original Array:" << endl;
+    // for(auto i: arr4) {
+    //     cout << i << " ";
+    // }
+    // cout << endl;
+    // move_zeroes_to_end_optimal(arr4, arr4.size());
+    // cout << "Processed Array:" << endl;
+    // for(auto i: arr4) {
+    //     cout << i << " ";
+    // }
+
+
+    /* Return UNION of two "sorted" array. Unions contains unique elements from both arrays. */
+    // vector<int> arr5_1 = {1,1,2,3,4,5};
+    // vector<int> arr5_2 = {2,3,4,4,5,6};
+
+    // cout << "Union of two arrays: " << endl;
+
+    // vector<int> result5 = union_of_2_arrays(arr5_1, arr5_1.size(), arr5_2, arr5_2.size());
+
+    // for(auto i: result5) {
+    //     cout << i << " ";
+    // }
+
+    /*
+    Return INTERSECTION of two "sorted" array. Intersection contains common elements from both arrays
+    AND can have REPEATeD values.
+    */
+    vector<int> arr6_1 = {1,2,2,3,3,4,5,6};
+    vector<int> arr6_2 = {2,3,3,5,6,6,7};
+
+    cout << "Intersection of two arrays: " << endl;
+
+    vector<int> result6 = intersection_of_2_arrays(arr6_1, arr6_1.size(), arr6_2, arr6_2.size());
+
+    for(auto i: result6) {
         cout << i << " ";
     }
-    cout << endl;
-    move_zeroes_to_end_optimal(arr4, arr4.size());
-    cout << "Processed Array:" << endl;
-    for(auto i: arr4) {
-        cout << i << " ";
-    }
+
+    cout << "\n\nProgram Finished!";
 
     return 0;
 }
