@@ -1,0 +1,23 @@
+<empty>
+
+Print LinkedList: 
+<empty>
+
+Length: 0
+
+Element 3 exist? 0
+Delete head:
+Can't delete, <empty> list
+<empty>
+
+Delete tail:
+Can't delete, <empty> list
+<empty>
+
+Delete at Position 4:
+Can't delete, <empty> list
+<empty>
+
+Delete by value 8:
+Can't delete, <empty> list
+<empty>
