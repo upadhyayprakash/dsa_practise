@@ -1,0 +1,9 @@
+Original Array:
+-1 2 3 3 4 5 -1 
+Biggest sum range of k elements:
+3 4 5 
+Max length (consecutive sub-array) with sum <= 11 is (brute-force):
+4
+
+Max length (consecutive sub-array) with sum <= 11 is (2-pointer):
+4
