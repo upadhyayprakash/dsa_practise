@@ -1,2 +1,3 @@
-Max points from 4 picked cards is:
-16
+Given string: cadbazabcad
+Longest substring length (no char repeat):
+4
