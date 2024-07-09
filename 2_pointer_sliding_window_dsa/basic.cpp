@@ -73,7 +73,11 @@ int get_max_sub_array_length_with_sum_less_equal_2_pointer(vector<int> &arr, int
             r++;
             sum += arr[r];
         } else {
-            while (sum > k) { // optimization to keep subtracting until 'sum' is within limit
+            /* This while loop can be skipped if all we want is the "length of sub-array" and not the
+            sub-array itself. To acheive this, 'l' can be shifted only once, i.e.till current
+            maxLength value. */
+            while (sum > k) {
+                // while loop intuition is to keep subtracting until 'sum' is within limit. when asked for sub-array itself and not just 'length'.
                 sum -= arr[l];
                 l++;
             }
@@ -98,19 +102,32 @@ int main() {
         cout << i << " ";
     }
 
-    /* Sub-array generation template with a condition and early break */
+    /* Pattern-1: Sub-array generation template with a condition and early break */
     vector<int> arr2 = {2,5,1,1,10};
     int k = 11;
     int result2 = get_max_sub_array_length_with_sum_less_equal_brute_force(arr2, arr2.size(), k);
     cout << "\nMax length (consecutive sub-array) with sum <= " << k << " is (brute-force):";
     cout << endl << result2 << endl;
 
-    /* Using 2-Pointer and window expand/shrink method to get the max window length */
+    /* Pattern-2: Using 2-Pointer and window expand/shrink method to get the max window length */
     int result3 = get_max_sub_array_length_with_sum_less_equal_2_pointer(arr2, arr2.size(), k);
     cout << "\nMax length (consecutive sub-array) with sum <= " << k << " is (2-pointer):";
     cout << endl << result3 << endl;
 
+    /**
+     * Pattern-3: Number of sub-arrays where <condition> (eg. 'sum' of elements = k)
+     * For this, by using pattern-2, we'll find,
+     * 1. # of arrays with sum <= k
+     * 2. # of arrays with sum <= k-1
+     * 
+     * And to get the answer = we subtract # from 1 - # from 2
+     */
 
+    /**
+     * Pattern-4: Shortest/Minimum sub-array with <condition>.
+     * For this, we take an initial big window that satisfies the <condition> and then
+     * shrink it till condition is still valid.
+     */
 
     return 0;
 }
