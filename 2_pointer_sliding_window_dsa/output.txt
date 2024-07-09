@@ -1,3 +1,2 @@
-Given string: cadbazabcad
-Longest substring length (no char repeat):
-4
+Max Consecutive Ones length:
+0
