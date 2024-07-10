@@ -9,4 +9,4 @@ Num of substring with all 3 chars:
 9
 Num of substring with all 3 chars:
 (optimal)
-0
+9

@@ -51,8 +51,29 @@ int num_of_substr_with_all_given_chars_better(string str) {
 }
 
 int num_of_substr_with_all_given_chars_optimal(string str) {
+    /* 
+        Input:
+            str -> b b a c b a
+        Optimal Approach:
+        1. We'll try to find the smallest valid substring that ends at third character.
+        2. In above case, 'b a c'.
+        3. We'll then add all previous chars appearance as a valid substring count.
+        4. In above case, we see one 'b' appears before 'b a c', hence the total count = 2.
+        5. To keep track of the oldest(smallest 'i' among three chars) character's last seen
+        position, we'll maintain an array[3] with char's last seen position.
+        6. Time Complexity: O(n), Space Complexity: O(1)
+    */
+    int cnt = 0;
+    int lastSeen[3] = {-1, -1, -1}; // '0' is a valid index, hence assign -1.
+    for(int i = 0; i < str.length(); i++) {
+        lastSeen[str[i] - 'a'] = i; // update char's current position
+
+        if(lastSeen[0] != -1 && lastSeen[1] != -1 && lastSeen[2] != -1) {
+            cnt = cnt + (1 + min(lastSeen[0], min(lastSeen[1], lastSeen[2])));
+        }
+    }
     
-    return 0;
+    return cnt;
 }
 
 int main() {
