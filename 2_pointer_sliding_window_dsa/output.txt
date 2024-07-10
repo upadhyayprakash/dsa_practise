@@ -1,3 +1,12 @@
-3 3 3 1 2 1 1 2 3 3 4 
-Length of largest sub-array:
-5
+Given string: bbacba
+
+Num of substring with all 3 chars:
+(brute-force)
+9
+
+Num of substring with all 3 chars:
+(better)
+9
+Num of substring with all 3 chars:
+(optimal)
+0
