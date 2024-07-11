@@ -1,1 +1,2 @@
-Tree Height: 4
+Is tree balanced?
+5
