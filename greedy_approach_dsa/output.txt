@@ -1,2 +1,2 @@
-Min. coins required for amount 49 is:
-20 20 5 2 2 
+Max Knapsack Value:
+5
