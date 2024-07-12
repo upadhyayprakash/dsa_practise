@@ -1,2 +1,2 @@
-Zig-zag traversal:
-1 3 2 5 7 
+Vertical traversal:
+2 1 5 3 7 
