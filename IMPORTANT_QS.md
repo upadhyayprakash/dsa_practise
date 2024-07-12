@@ -4,4 +4,8 @@
 
 3. Given the list of food orders with their ETAs and need to maximize the number of orders delivered by not exceeding each order's ETAs.
 
+# Meeting Room Problems:
+1. https://www.youtube.com/watch?v=aZ_vuZxlB4I
+2. https://www.youtube.com/watch?v=aby3aYFjFT0
+3. https://www.youtube.com/watch?v=_oeG3pfhQQA
 4. 
