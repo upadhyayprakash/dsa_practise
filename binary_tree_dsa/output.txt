@@ -1,2 +1,2 @@
-Identical?
-1
+Zig-zag traversal:
+1 3 2 5 7 
