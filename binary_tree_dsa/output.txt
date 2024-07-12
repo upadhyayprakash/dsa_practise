@@ -1,2 +1,4 @@
-Printing result in pre-order: 
+Printing result in pre-order for 'pre' and 'in' input: 
+10 20 40 50 30 60 
+Printing result in pre-order for 'post' and 'in' input: 
 10 20 40 50 30 60 
