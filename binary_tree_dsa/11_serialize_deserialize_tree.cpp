@@ -58,8 +58,8 @@ Node* deserialize_tree(string seq) {
     if(seq.size() == 0) return nullptr;
 
     stringstream s(seq);
-
     string str;
+
     getline(s, str, ',');
     Node* root = new Node(stoi(str));
     queue<Node*> q;
@@ -71,7 +71,7 @@ Node* deserialize_tree(string seq) {
         q.pop();
 
         getline(s, str, ',');
-        if(str == '#')
+        if(str == "#")
             node->left = nullptr;
         else {
             Node* leftNode = new Node(stoi(str));
@@ -80,7 +80,7 @@ Node* deserialize_tree(string seq) {
         }
 
         getline(s, str, ',');
-        if(str == '#')
+        if(str == "#")
             node->right = nullptr;
         else {
             Node* rightNode = new Node(stoi(str));
