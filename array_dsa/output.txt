@@ -1,4 +1,10 @@
-Intersection of two arrays: 
-2 3 3 5 6 
-
-Program Finished!
+Original Matrix:
+1 1 1 1 
+1 0 1 1 
+1 1 0 1 
+0 1 1 1 
+Updated Matrix:
+0 0 0 1 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
