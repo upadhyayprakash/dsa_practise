@@ -12,4 +12,7 @@
 5. Construct a tree from Pre-order and In-order sequences
    YouTube: https://youtu.be/aZNaLrVebKQ?si=ELoeQjEmEtz0E2v_
 
-6. 
+6. Tree Serialization and Deserialization.
+    YouTube: https://youtu.be/-YbXySKJsX8?si=4C-XWdz7rr81r2Ix
+
+7. 
