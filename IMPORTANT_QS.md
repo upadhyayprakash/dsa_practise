@@ -47,7 +47,10 @@
 
 # Priority Queue
 
-# Arrays (Hard)
+# Arrays
+   1. Sort 0s, 1s and 2s
+      YouTube: https://youtu.be/tp8JIuCXBaU?si=oP2qVAFfocfakd4Z
+
 
 # Intervals
 

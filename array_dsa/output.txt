@@ -1,11 +1,5 @@
-Target found? (brute-force):
-YES
-Target found? (w/ indices) (brute-force):
-1,3,
-Target found? (better):
-YES
-Target found? (w/ indices) (better):
-1,3,
-Target found? (optimal):
-YES
+Original array:
+0 1 1 0 1 2 1 2 0 0 0 
 
+Sorted array:
+0 0 0 0 0 1 1 1 1 2 2 
