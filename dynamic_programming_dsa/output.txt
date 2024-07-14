@@ -1,0 +1,4 @@
+fibo_memoization(9):
+34
+fibo_tabulation(9):
+34
