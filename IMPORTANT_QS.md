@@ -42,6 +42,9 @@
 # Dynamic Programming
 
 # Graphs
+   1. Course Schedule-1 and 2
+      YouTube: https://youtu.be/WAOfKpxYHR8?si=4kx9XgOqppkz8wHE
+   2. 
 
 # LinkedList
 

@@ -1,10 +1,6 @@
 #include <iostream>
 using namespace std;
 
-void print_graph() {
-
-}
-
 int main() {
     // Adjacency 'Matrix': using 2-D array. Space used: O(N x N)
     int n, m;
