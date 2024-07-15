@@ -4,7 +4,7 @@
 
 3. Given the list of food orders with their ETAs and need to maximize the number of orders delivered by not exceeding each order's ETAs.
 
-4. Meeting Room Problems:
+4. [DONE] Meeting Room Problems:
    1. [DONE] Meeting Room-1:
       YouTube (Striver's): https://youtu.be/II6ziNnub1Q?si=otGaNPBjlldOhYbF
    3. [DONE] Meeting Room-2:
@@ -26,10 +26,10 @@
    4. Striver's Recursion Series till 10th Episode Video
 
 # Tree
-   1. Construct a tree from Pre-order and In-order sequences
+   1. [DONE] Construct a tree from Pre-order and In-order sequences
       YouTube: https://youtu.be/aZNaLrVebKQ?si=ELoeQjEmEtz0E2v_
 
-   2. Tree Serialization and Deserialization.
+   2. [DONE] Tree Serialization and Deserialization.
        YouTube: https://youtu.be/-YbXySKJsX8?si=4C-XWdz7rr81r2Ix
 
    3. Delete a node in BST.
@@ -96,10 +96,16 @@
    3. Trapping Rainwater
    4. Sliding Window Maximum
    5. Asteroid Collision
+   6. Largest Rectangle in Histogram
+      Article: https://takeuforward.org/data-structure/area-of-largest-rectangle-in-histogram/
 
 # Arrays
    1. Sort 0s, 1s and 2s
       YouTube: https://youtu.be/tp8JIuCXBaU?si=oP2qVAFfocfakd4Z
+   2. Word Search in matrix
+      Article: https://takeuforward.org/data-structure/word-search-leetcode/
+   3. Max Rectangle of 1s in 2-D Matrix array
+      YouTube: https://www.youtube.com/watch?v=tOylVCugy9k
 
 # Binary Search
    0. Basic
@@ -115,4 +121,4 @@
 
 # Intervals
 
-# Heaps
+# Heaps (Piority Queue)
