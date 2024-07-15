@@ -4,7 +4,7 @@
 #include <set>
 using namespace std;
 
-vector<pair<int, int>> insert_interval_brute_force(vector<pair<int, int>> intervals, pair<int, int> newInterval) {
+vector<pair<int, int>> insert_interval_brute_force(vector<pair<int, int>> &intervals, pair<int, int> newInterval) {
     vector<pair<int,int>> ans;
     int i = 0;
     int n = intervals.size();
@@ -37,10 +37,13 @@ int main() {
     vector<pair<int, int>> intervals = {{1,2}, {3,4}, {7,7}, {8,10}, {12,16}};
     pair<int, int> newInterval = {5,8};
 
-    cout << "Given intervals:\n";
+    cout << "Original intervals:\n";
     for(auto i: intervals) {
         cout << i.first << ", " << i.second << endl;
     }
+
+    cout << "New interval:\n";
+    cout << newInterval.first << ", " << newInterval.second << endl;
 
     vector<pair<int, int>> ans = insert_interval_brute_force(intervals, newInterval);
 
