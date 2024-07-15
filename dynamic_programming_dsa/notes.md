@@ -65,3 +65,21 @@ int fibo(int n, int dp[]) {
     return dp[n-1];
 }
 ```
+
+## Identify DP Problem
+Whenever there's a multiple possibilities to solve a problem, like,
+- Count distinct number of ways to achieve the result
+- Mimimum or Maximum value (Best way to achieve something)
+- It's a recursive problem
+
+It's probably a DP problem.
+
+### Steps To Solve The Problem After Identification
+
+Once the problem has been identified, the following three steps comes handy in solving the problem:
+
+1. Try to represent the problem in terms of indexes.
+2. Try all possible choices/ways at every index according to the problem statement.
+3. If the question states
+    - Count all the ways - return sum of all choices/ways.
+    - Find maximum/minimum- return the choice/way with maximum/minimum output.

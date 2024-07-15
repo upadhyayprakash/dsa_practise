@@ -5,9 +5,20 @@
 3. Given the list of food orders with their ETAs and need to maximize the number of orders delivered by not exceeding each order's ETAs.
 
 4. Meeting Room Problems:
-   1. https://www.youtube.com/watch?v=aZ_vuZxlB4I
-   2. https://www.youtube.com/watch?v=aby3aYFjFT0
-   3. https://www.youtube.com/watch?v=_oeG3pfhQQA
+   1. Striver's YouTube: https://youtu.be/II6ziNnub1Q?si=KgREmPJRGQ4yLgfo
+   2. https://www.youtube.com/watch?v=aZ_vuZxlB4I
+   3. https://www.youtube.com/watch?v=aby3aYFjFT0
+   4. https://www.youtube.com/watch?v=_oeG3pfhQQA
+
+# Recursion
+   1. Sub-sequence Calculation using Recursion (https://youtu.be/AxNNVECce8c?si=UrEfJ1EZbu483SOo)
+   
+   2. Combination Sum using Recursion (https://youtu.be/OyZFFqQtu98?si=z8mtwknhSINhhRAU)
+   
+   3. N Queens
+      YouTube: https://youtu.be/i05Ju7AftcM?si=K3ljK4xjipjopA4H
+
+   4. Striver's Recursion Series till 10th Episode Video
 
 # Tree
    1. Construct a tree from Pre-order and In-order sequences
@@ -41,12 +52,33 @@
 
 # Dynamic Programming
 
+   1. Find occurences of given word in 2-D Array:
+      YouTube: https://www.youtube.com/watch?v=eCMiY-BUnOo
+
+   2. 
+
+# Greedy
+   1. Fractional Knapsack
+      YouTube: https://youtu.be/F_DDzYnxO14?si=0Ba16grsn4qKx64I
+
 # Graphs
    1. Course Schedule-1 and 2
       YouTube: https://youtu.be/WAOfKpxYHR8?si=4kx9XgOqppkz8wHE
-   2. 
+   2. Clone a Graph
+      YouTube: https://www.youtube.com/watch?v=mQeF6bN8hMk
 
 # LinkedList
+
+   1. Reverse a LinkedList
+
+   2. Detect Loop in Linked List
+      YouTube: https://youtu.be/wiOo4DC5GGA?si=joosbSTAmHSO8CYg
+
+   4. Length of Loop in LinkedList
+      YouTube: https://youtu.be/I4g1qbkTPus?si=V221tB4j6SegkZJU
+   
+   5. Max Rectangle of 1s
+      LeetCode: https://leetcode.com/problems/maximal-rectangle/description/
 
 # Priority Queue
 

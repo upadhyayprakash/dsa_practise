@@ -1,2 +1,11 @@
-Max Knapsack Value:
-5
+Given intervals:
+1, 2
+3, 4
+7, 7
+8, 10
+12, 16
+Updated intervals:
+1, 2
+3, 4
+5, 10
+12, 16
