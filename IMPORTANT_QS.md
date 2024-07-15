@@ -5,10 +5,15 @@
 3. Given the list of food orders with their ETAs and need to maximize the number of orders delivered by not exceeding each order's ETAs.
 
 4. Meeting Room Problems:
-   1. Striver's YouTube: https://youtu.be/II6ziNnub1Q?si=KgREmPJRGQ4yLgfo
-   2. https://www.youtube.com/watch?v=aZ_vuZxlB4I
-   3. https://www.youtube.com/watch?v=aby3aYFjFT0
-   4. https://www.youtube.com/watch?v=_oeG3pfhQQA
+   1. [DONE] Meeting Room-1:
+      YouTube (Striver's): https://youtu.be/II6ziNnub1Q?si=otGaNPBjlldOhYbF
+   3. [DONE] Meeting Room-2:
+      YouTube: https://www.youtube.com/watch?v=FdzJmTCVyJU&t=1s
+   
+   Other Meeting Room Videos:
+   4. https://www.youtube.com/watch?v=aZ_vuZxlB4I
+   5. https://www.youtube.com/watch?v=aby3aYFjFT0
+   6. https://www.youtube.com/watch?v=_oeG3pfhQQA
 
 # Recursion
    1. Sub-sequence Calculation using Recursion (https://youtu.be/AxNNVECce8c?si=UrEfJ1EZbu483SOo)
@@ -66,6 +71,8 @@
       YouTube: https://youtu.be/WAOfKpxYHR8?si=4kx9XgOqppkz8wHE
    2. Clone a Graph
       YouTube: https://www.youtube.com/watch?v=mQeF6bN8hMk
+   3. Travelling Salesman Problem
+      YouTube: https://www.youtube.com/watch?v=JE0JE8ce1V0
 
 # LinkedList
 
@@ -80,12 +87,31 @@
    5. Max Rectangle of 1s
       LeetCode: https://leetcode.com/problems/maximal-rectangle/description/
 
-# Priority Queue
+# Stack/Queues
+   0. [DONE] Set elements with Next greater element
+      YouTube: https://youtu.be/Du881K7Jtk8?si=Pe3rUbXTB_Xa-Ygi
+   2. LRU Cache
+      YouTube: https://youtu.be/xDEuM5qa0zg?si=UBK29wZfVxaAL1Y-
+
+   3. Trapping Rainwater
+   4. Sliding Window Maximum
+   5. Asteroid Collision
 
 # Arrays
    1. Sort 0s, 1s and 2s
       YouTube: https://youtu.be/tp8JIuCXBaU?si=oP2qVAFfocfakd4Z
 
+# Binary Search
+   0. Basic
+
+   2. Koko eating bananas
+      YouTube: https://youtu.be/qyfekrNni90?si=9SYGxTsnA4SlFTro
+
+   3. Book Allocation
+
+   4. Aggresive Cows
+
+   5. Find peak element
 
 # Intervals
 
