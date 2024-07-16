@@ -51,4 +51,31 @@ int main() {
 }
 ```
 
-## 
+## Merge Two Configs
+#### Tree 1
+
+```mermaid
+graph
+1["ROOT - t1"] --> 2["A - alpha"]
+2 --> 8["C - beta"]
+2 --> 9["X - phi"]
+9 --> 10["Z - mu"]
+1["ROOT - t1"] --> 3["B - gamma"]
+1["ROOT - t1"] --> 4["A - delta"]
+1["ROOT - t1"] --> 5["C - epsilon"]
+1["ROOT - t1"] --> 6["B - theta"]
+1["ROOT - t1"] --> 7["D - delta"]
+```
+
+#### Tree 2
+
+```mermaid
+graph
+1["ROOT - t2"] --> 2["A - apple"]
+2 --> 8["C - chappal"]
+2 --> 9["Y - yotta"]
+1["ROOT - t2"] --> 3["E - etta"]
+1["ROOT - t2"] --> 4["B - banana"]
+1["ROOT - t2"] --> 5["A - aam"]
+1["ROOT - t2"] --> 6["D - dollar"]
+```

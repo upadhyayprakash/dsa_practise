@@ -1,4 +1,5 @@
-Doubly Linked List
-1 <-> 2 <-> 3 <-> 4 <-> 5 <-> 
-Reversed List:
-5 <-> 4 <-> 3 <-> 2 <-> 1 <-> 
+obj->get(1):
+101
+obj->put(1,101):
+obj->get(1):
+101

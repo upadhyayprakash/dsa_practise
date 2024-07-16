@@ -108,7 +108,7 @@
       YouTube: https://www.youtube.com/watch?v=tOylVCugy9k
 
 # Binary Search
-   0. Basic
+   0. [DONE] Basic
 
    2. Koko eating bananas
       YouTube: https://youtu.be/qyfekrNni90?si=9SYGxTsnA4SlFTro
