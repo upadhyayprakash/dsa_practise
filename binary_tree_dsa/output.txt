@@ -1,6 +1,6 @@
 
 Tree-1:
-└──ROOT (t1)
+└──ROOT-1 (t1)
     ├──A (alpha)
     │   ├──C (beta)
     │   └──X (phi)
@@ -12,11 +12,27 @@ Tree-1:
     └──D (delta)
 
 Tree-2:
-└──ROOT (t2)
+└──ROOT-2 (t2)
     ├──A (apple)
     │   ├──C (chappal)
     │   └──Y (yotta)
     ├──E (etta)
     ├──B (banana)
     ├──A (aam)
-    └──D (dollar)
+    ├──D (dollar)
+    └──A (Atta)
+
+Result Tree:
+└──ROOT-1 (t2)
+    ├──A (apple)
+    │   ├──C (chappal)
+    │   ├──X (phi)
+    │   │   └──Z (mu)
+    │   └──Y (yotta)
+    ├──B (banana)
+    ├──A (aam)
+    ├──C (epsilon)
+    ├──B (theta)
+    ├──D (dollar)
+    ├──E (etta)
+    └──A (Atta)
