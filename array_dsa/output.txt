@@ -1,4 +1,2 @@
-Contains duplicates? (brute-force)
-true
-Contains duplicates? (optimal)
-true
+Lower Bound of 6:
+5
