@@ -1,2 +1,5 @@
-Lower Bound of 6:
+Lower Bound of 7:
 5
+
+Upper Bound of 7:
+7
