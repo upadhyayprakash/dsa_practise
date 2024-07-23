@@ -1,5 +1,14 @@
-Lower Bound of 7:
+Lower Bound of 6:
 5
 
-Upper Bound of 7:
+Upper Bound of 6:
+5
+
+Insert Position of 6:
+5
+
+Ceil of 6: 
 7
+
+Floor of 6: 
+5
