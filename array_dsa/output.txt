@@ -1,14 +1,17 @@
-Lower Bound of 6:
+Lower Bound of 7:
 5
 
-Upper Bound of 6:
-5
-
-Insert Position of 6:
-5
-
-Ceil of 6: 
+Upper Bound of 7:
 7
 
-Floor of 6: 
+Insert Position of 7:
 5
+
+Ceil of 7: 
+7
+
+Floor of 7: 
+7
+
+1st and last index of 7:
+{5, 6}
