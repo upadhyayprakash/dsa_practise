@@ -17,6 +17,22 @@ Node* reverse_linked_list(Node* head) {
     return prev;
 }
 
+Node* reverse_linked_list_recursive(Node* head) {
+    // Base Condition
+    if(!head || !head->next)
+        return head;
+    
+    // Recursive Call
+    Node* newHead = reverse_linked_list_recursive(head->next);
+
+    // Process: Swap the nodes
+    Node* front = head->next;
+    front->next = head;
+    head->next = nullptr;
+
+    return newHead;
+}
+
 int main() {
     // construct a linked list
     vector<int> arr = {1,2,3,4,5,6};
@@ -25,8 +41,14 @@ int main() {
     cout << "Original Linked List:\n";
     print_linked_list(head);
 
-    cout << "\n\nReversed Linked List:\n";
+    cout << "\n\nReversed Linked List (iterative):\n";
     Node* result = reverse_linked_list(head);
     print_linked_list(result);
+
+    cout << "\n\nReversed Linked List (recursive):\n";
+    Node* head1 = arrToLL(arr);
+    Node* result1 = reverse_linked_list_recursive(head1);
+    print_linked_list(result1);
+
     return 0;
 }

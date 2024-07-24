@@ -1,5 +1,8 @@
 Original Linked List:
 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 
 
-Reversed Linked List:
+Reversed Linked List (iterative):
+6 -> 5 -> 4 -> 3 -> 2 -> 1 -> 
+
+Reversed Linked List (recursive):
 6 -> 5 -> 4 -> 3 -> 2 -> 1 -> 
