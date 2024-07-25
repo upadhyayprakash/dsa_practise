@@ -42,7 +42,7 @@ void print_post_order(Node* root) {
     cout << root->data << " ";
 }
 
-void print_level_order(Node* root) {
+void print_level_order(Node* root) { // Time & Space Complexity: O(N)
     if(root == nullptr)
         return;
 

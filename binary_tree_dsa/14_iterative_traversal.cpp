@@ -19,10 +19,7 @@ void render_tree(Node* node, string prefix = "", bool isLast = true)
     if( node != nullptr )
     {
         cout << prefix;
-
         cout << (!isLast ? "├──" : "└──" );
-
-        // print the value of the node
         cout << " "  << node->data << endl;
 
         render_tree(node->left, prefix + (!isLast ? "│   " : "    "), false);
