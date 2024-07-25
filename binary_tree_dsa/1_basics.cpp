@@ -74,12 +74,12 @@ void print_pre_in_post_order_at_once(Node* root) {
             if(item.first->left) st.push({item.first->left, 1}); // push item's left child
         }
         else if(item.second == 2) {
-            in.push_back(item.first->data); // insert in 'pre' list
+            in.push_back(item.first->data); // insert in 'in' list
             item.second++; // increment counter
             st.push(item); // push item itself
             if(item.first->right) st.push({item.first->right, 1}); // push item's left child
         } else {
-            post.push_back(item.first->data); // insert in 'pre' list
+            post.push_back(item.first->data); // insert in 'post' list
         }
     }
 
