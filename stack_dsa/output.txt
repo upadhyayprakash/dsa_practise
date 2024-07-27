@@ -1,9 +1,1 @@
-Priority Queue (STL):
-maxHeap:
-4 3 2 1 
-minHeap:
-1 2 3 4 
-Top Element maxHeap:
-4
-Top Element minHeap:
-1
+8 2 5 1 
