@@ -59,7 +59,14 @@ class PriorityQueue {
             }
         }
 
-        void insert(int priority) {
+        void print_pq() {
+            for(auto i: pq) {
+                cout << i << " ";
+            }
+            cout << endl;
+        }
+
+        void push(int priority) {
             pq.push_back(priority);
             shiftUp(pq.size() - 1);
         }
@@ -76,22 +83,47 @@ class PriorityQueue {
             return result;
         }
 
-        void print_pq() {
-            for(auto i: pq) {
-                cout << i << " ";
-            }
-            cout << endl;
+        int top() {
+            return pq[0];
         }
 
+        void remove(int i) {
+            pq[i] = top() + 1;
+            shiftUp(i);
+            pop();
+        }
 
+        void update(int i, int priority) {
+            int oldValue = pq[i];
+            pq[i] = priority;
+            if(priority > oldValue)
+                shiftUp(i);
+            else
+                shiftDown(i);
+        }
 };
 
 int main() {
     PriorityQueue* pq = new PriorityQueue();
-    pq->insert(1);
-    pq->insert(8);
-    pq->insert(5);
-    pq->insert(2);
+    pq->push(1);
+    pq->push(8);
+    pq->push(5);
+    pq->push(2);
+    cout << "Priority Queue:\n";
     pq->print_pq();
+
+    cout << "\nTop of PQ:\n" << pq->top() << endl;
+
+    cout << "\nPQ after removing 2:\n";
+    pq->remove(1);
+    pq->print_pq();
+    cout << "\nRestoring...\n";
+    pq->push(2);
+    pq->print_pq();
+    cout << "\nUpdating 5 to 11:\n";
+    pq->update(2, 11);
+    pq->print_pq();
+    cout << "\nSize of PQ:\n" << pq->size();
+
     return 0;
 }

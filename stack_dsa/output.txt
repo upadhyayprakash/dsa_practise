@@ -1,1 +1,17 @@
+Priority Queue:
 8 2 5 1 
+
+Top of PQ:
+8
+
+PQ after removing 2:
+8 1 5 
+
+Restoring...
+8 2 5 1 
+
+Updating 5 to 11:
+11 2 8 1 
+
+Size of PQ:
+4
