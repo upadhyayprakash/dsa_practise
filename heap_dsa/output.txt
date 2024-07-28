@@ -1,37 +1,4 @@
-# Priority Queue (maxHeap):
-8 2 5 1 
-
-Top of PQ:
-8
-
-PQ after removing 2:
-8 1 5 
-
-Restoring...
-8 2 5 1 
-
-Updating 5 to 11:
-11 2 8 1 
-
-Size of PQ:
-4
-
-=========
-
-# Priority Queue (minHeap):
-1 2 5 8 
-
-Top of PQ:
-1
-
-PQ after removing '2':
-1 8 5 
-
-Restoring...
-1 2 5 8 
-
-Updating 5 to 11:
-1 2 11 8 
-
-Size of PQ:
-4
+Is array a maxHeap?
+YES
+Is array a minHeap?
+NO

@@ -17,3 +17,12 @@ Priority queues can be implemented using *"Binary Heap"* which have following pr
 - Peak (`top()`) -> gets the max priority element
 
 ## Implementation of Priority Queue using Binary Heap
+
+Helper methods:
+- parent()
+- leftChild()
+- rightChild()
+- shiftUp()
+- shiftDown()
+
+Using these helper methods, we can implement the priority queue operations such as `push()`, `pop()`, `top()`. Check the code in `pq_using_binary_heap.cpp`.
