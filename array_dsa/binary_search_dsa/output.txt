@@ -1,6 +1,2 @@
-Minimum 'k' for h = 8
-(Brute-force)
-4
-Minimum 'k' for h = 8
-(Optimal)
-4
+Min capacity:
+15
