@@ -1,6 +1,6 @@
-Old array:
-4, 12, 5, 3, 1, 2, 5, 3, 1, 2, 4, 6, 
-NGE array (Variant-1):
-12, -1, 6, 5, 2, 5, 6, 4, 2, 4, 6, -1, 
-NGE array (Variant-2):
-12, -1, 6, 5, 2, 5, 6, 4, 2, 4, 6, 12, 
+Trapped Water:
+13
+Trapped Water (Better):
+13
+Trapped Water (Optimal):
+13

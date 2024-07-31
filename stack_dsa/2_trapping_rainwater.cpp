@@ -6,31 +6,29 @@
 using namespace std;
 
 /**
- * Approach: Optimal (2-Pointer)
- * 1. 
+ * Approach: Optimal (2-Pointer), Refer to video for Intuition
  */
 int get_total_trapped_water_optimal(vector<int> &arr) {
     int n = arr.size();
     int total = 0;
-    int leftMax = 0;
-    int rightMax = 0;
+    int left = 0;
+    int right = n - 1;
+    int maxLeft = 0;
+    int maxRight = 0;
 
-    for(int i = 0; i < n; i++) {
-        // Example arr: {1,0,1,0,2,1,0,1,5,2,2,1,4,1}
-        int j = i + 1;
-        if(j < n) rightMax = arr[j];
-        while(j < n) { // find the maximum ele on right of 'curr' element
-            if(arr[j] > rightMax)
-                rightMax = arr[j];
-            j++;
+    while (left <= right) {
+        if(arr[left] <= arr[right]) {
+            if(arr[left] >= maxLeft) maxLeft = arr[left];
+            else total += maxLeft - arr[left];
+
+            left++;
+        } else {
+            if(arr[right] >= maxRight) maxRight = arr[right];
+            else total += maxRight - arr[right];
+
+            right--;
         }
-        int water = min(leftMax, rightMax) - arr[i];
-        water = water < 0 ? 0 : water; // if negative water, then make zero
-        total += water;
-        if(arr[i] >= leftMax) // re-assign leftMax
-            leftMax = arr[i];
     }
-
     return total;
 }
 
