@@ -31,4 +31,3 @@ void render_tree(Node* node, string prefix = "", bool isLast = true)
         }
     }
 }
-
