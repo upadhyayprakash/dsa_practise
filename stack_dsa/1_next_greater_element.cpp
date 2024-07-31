@@ -15,7 +15,7 @@ using namespace std;
  * 4. Rest of the steps remain same, except when we're modifying the 'nge' array.
  */
 
-vector<int> next_greater_element_variant_2(vector<int> &arr) {
+vector<int> next_greater_element_variant_2(vector<int> &arr) { // Time Complexity: O(2N + 2N), Space Complexity: O(2N)
     int n = arr.size();
     vector<int> nge(n);
     stack<int> st;
