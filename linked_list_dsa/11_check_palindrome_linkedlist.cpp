@@ -78,7 +78,7 @@ bool check_palindrome_optimal(Node* head) {
 }
 
 int main() {
-    vector<int> arr = {1,2,3,3,2,1};
+    vector<int> arr = {1,2,2,1};
     Node* head = arrToLL(arr);
     print_linked_list(head); // IMPORTANT: Don't print after adding loop.
 
