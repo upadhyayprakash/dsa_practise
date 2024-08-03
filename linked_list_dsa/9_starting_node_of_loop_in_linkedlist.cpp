@@ -3,7 +3,7 @@
  * YouTube (Striver's): https://www.youtube.com/watch?v=2Kd0KKmmHFc
  */
 #include <iostream>
-#include "utility.h"
+#include "ll_utility.h"
 using namespace std;
 
 Node* add_a_loop(Node* head) {
@@ -63,7 +63,7 @@ Node* get_start_of_loop(Node* head) {
 int main() {
     vector<int> arr = {1,2,3,4,5,6,7,8,9,10};
     Node* head = arrToLL(arr);
-    printLL(head); // IMPORTANT: Don't print after adding loop.
+    print_linked_list(head); // IMPORTANT: Don't print after adding loop.
     head = add_a_loop(head);
 
     Node* result = get_start_of_loop(head);
