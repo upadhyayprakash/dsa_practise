@@ -2,5 +2,5 @@
 Added loop from end to node:
 3
 
-Start point of Loop:
-3
+Length of Loop:
+8
