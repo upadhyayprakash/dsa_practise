@@ -66,8 +66,8 @@ bool is_loop_optimal(Node* head) { // TC: O(N), SC(1)
 int main() {
     vector<int> arr = {1,2,3,4,5,6,7,8,9,10};
     Node* head = arrToLL(arr);
-    print_linked_list(head); // IMPORTANT: Don't print after adding loop.
-    head = add_a_loop(head);
+    print_linked_list(head);
+    head = add_a_loop(head); // IMPORTANT: Don't print after adding loop.
     cout << "\nIs Loop?\n" << (is_loop_brute_force(head) ? "YES" : "NO");
     cout << "\nIs Loop?\n" << (is_loop_optimal(head) ? "YES" : "NO");
     return 0;

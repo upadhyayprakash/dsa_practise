@@ -63,8 +63,8 @@ Node* get_start_of_loop(Node* head) {
 int main() {
     vector<int> arr = {1,2,3,4,5,6,7,8,9,10};
     Node* head = arrToLL(arr);
-    print_linked_list(head); // IMPORTANT: Don't print after adding loop.
-    head = add_a_loop(head);
+    print_linked_list(head);
+    head = add_a_loop(head); // IMPORTANT: Don't print after adding loop.
 
     Node* result = get_start_of_loop(head);
     int val = result ? result->data : 0;
