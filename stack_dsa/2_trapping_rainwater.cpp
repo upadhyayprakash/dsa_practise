@@ -68,8 +68,9 @@ int get_total_trapped_water_better(vector<int> &arr) { // Time Complexity: O(3N)
 /**
  * Approach:
  * 1. We'll calculate maximum possible unit water trapped for each column.
- * 2. Find the max on 'left' and 'right'. * 3. If no maxLeft or maxRight possible, then assume 'ele' itself.
- * 3. Calculate difference of min(maxLeft, maxRight) and the 'ele' and sum it.
+ * 2. Find the max on 'left' and 'right'.
+ * 3. If no maxLeft or maxRight possible, then assume 'ele' itself.
+ * 4. Calculate difference of min(maxLeft, maxRight) and the 'ele' and sum it.
  */
 int get_total_trapped_water_brute_force(vector<int> &arr) { // Time Complexity: O(N^2)
     int n = arr.size();

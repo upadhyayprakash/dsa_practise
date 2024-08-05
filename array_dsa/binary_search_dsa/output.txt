@@ -1,2 +1,2 @@
-Min capacity:
-15
+Min. number of days:
+12
