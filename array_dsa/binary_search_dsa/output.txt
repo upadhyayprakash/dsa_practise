@@ -1,2 +1,2 @@
-Max. gap between cows:
+Maximized gap between cows:
 3
