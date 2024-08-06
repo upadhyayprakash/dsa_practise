@@ -1,2 +1,2 @@
-Min. number of days:
-12
+Max. gap between cows:
+3
