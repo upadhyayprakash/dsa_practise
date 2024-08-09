@@ -1,6 +1,2 @@
-kth largest element(brute-force):
-4
-kth largest element(optimal):
-4
-kth smallest element(optimal):
-3
+Sorted arrays:
+4 5 6 7 8 9 10 20 30 
