@@ -44,7 +44,7 @@ vector<int> next_greater_element_variant_2(vector<int> &arr) { // Time Complexit
  * 4. If there were no elements to be popped in stack, assign -1 as NGE of 'ele'.
  * 5. Push the 'ele' to stack.
  */
-vector<int> next_greater_element_variant_1(vector<int> &arr) {
+vector<int> next_greater_element_variant_1(vector<int> &arr) { // TC: O(2N), SC: O(N) for stack
     vector<int> nge(arr.size());
     stack<int> st;
     for(int i = arr.size() - 1; i >= 0; i--) {

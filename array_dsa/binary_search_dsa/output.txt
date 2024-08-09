@@ -1,2 +1,2 @@
-Maximized gap between cows:
-3
+Minimize max sub-array:
+60

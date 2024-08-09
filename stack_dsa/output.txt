@@ -1,6 +1,4 @@
-Trapped Water:
-13
-Trapped Water (Better):
-13
-Trapped Water (Optimal):
-13
+Largest rectangle area(Better):
+10
+Largest rectangle area(Optimal):
+10
