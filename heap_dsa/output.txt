@@ -2,3 +2,5 @@ kth largest element(brute-force):
 4
 kth largest element(optimal):
 4
+kth smallest element(optimal):
+3
