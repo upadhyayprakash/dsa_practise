@@ -96,6 +96,7 @@
     "variant": "cpp",
     "vector": "cpp",
     "algorithm": "cpp",
-    "__verbose_abort": "cpp"
+    "__verbose_abort": "cpp",
+    "__memory": "cpp"
   }
 }
