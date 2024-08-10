@@ -1,2 +1,4 @@
-Sorted arrays:
-4 5 6 7 8 9 10 20 30 
+Merged k Sorted arrays:(brute):
+1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 
+Merged k Sorted arrays:(optimal):
+1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 
