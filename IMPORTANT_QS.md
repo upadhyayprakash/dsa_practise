@@ -45,7 +45,6 @@
        YouTube (BT): https://youtu.be/_-QHfMDde90?si=W8GzfIZMOn80DifH
        YouTube (BST): https://youtu.be/cX_kPV_foZc?si=4dRilNrEld6gXmrf
 
-   
    7. Subtree of another Tree:
       Article: https://takeuforward.org/data-structure/subtree-of-another-tree/
 
@@ -54,13 +53,18 @@
 
    9. Invert a Binary Tree:
       Article: https://takeuforward.org/data-structure/check-for-symmetrical-binary-tree/
+   
+   10. Binary Tree maximum Path Sum
+      LeetCode: https://leetcode.com/problems/binary-tree-maximum-path-sum
+
 
 # Dynamic Programming
 
    1. Find occurences of given word in 2-D Array:
       YouTube: https://www.youtube.com/watch?v=eCMiY-BUnOo
 
-   2. 
+   2. Find All Possible Recipes from Given Supplies
+      LeetCode: https://leetcode.com/problems/find-all-possible-recipes-from-given-supplies
 
 # Greedy
    1. Fractional Knapsack
@@ -106,6 +110,8 @@
       Article: https://takeuforward.org/data-structure/word-search-leetcode/
    3. Max Rectangle of 1s in 2-D Matrix array
       YouTube: https://www.youtube.com/watch?v=tOylVCugy9k
+   4. Minimum Area Rectangle
+      LeetCode: https://leetcode.com/problems/minimum-area-rectangle/
 
 # Binary Search
    0. [DONE] Basic

@@ -1,6 +1,8 @@
 /**
  * Alternatively merge characters of 2 strings
  * LeetCode: https://leetcode.com/problems/merge-strings-alternately
+ * Pattern: string
+ * Tags: easy
  */
 
 #include <iostream>
