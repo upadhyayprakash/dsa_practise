@@ -58,7 +58,7 @@ vector<int> replace_ele_by_rank_optimal(vector<int> &arr) {
     int rank = 1;
     for(int i = 0; i < arr_1.size() - 1; i++) {
         arr[arr_1[i].second] = rank;
-        if(arr_1[i] != arr_1[i+1])
+        if(arr_1[i].first != arr_1[i+1].first)
             rank++;
     }
     // Step-4: Handle the last element
