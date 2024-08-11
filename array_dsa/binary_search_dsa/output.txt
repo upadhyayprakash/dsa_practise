@@ -1,2 +1,4 @@
-Square root of 2147483647 is:
-46340
+Single element:(brute):
+3
+Single element:(optimal):
+3
