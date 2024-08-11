@@ -1,4 +1,2 @@
-Single element:(brute):
-3
-Single element:(optimal):
+target index:
 3
