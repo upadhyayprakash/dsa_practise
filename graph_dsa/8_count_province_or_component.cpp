@@ -14,7 +14,7 @@ void dfs(int node, vector<int> adjList[], vector<int> &visited) {
             dfs(it, adjList, visited);
 }
 
-int count_province(vector<vector<int>> adjMatrix, int V) {
+int count_province(vector<vector<int>> adjMatrix, int V) { // TC: O(N) + O(V + 2E)
     // step-1: Convert adjMatrix to adjList
     vector<int> adjList[V];
     for(int i = 0; i < V; i++) {
