@@ -8,6 +8,18 @@
 #include <queue>
 using namespace std;
 
+bool dfs_detect(int node, int parent, vector<int> adj[], vector<int> &visited) {
+    visited[node] = 1;
+    for(auto i: adj[node]) {
+        if(visited[i] != 1) {
+            if(dfs_detect(i, node, adj, visited))
+                return true;
+        } else if(parent != i)
+            return true;
+    }
+    return false;
+}
+
 bool bfs_detect(int node, vector<int> adj[], vector<int> &visited) {
     visited[node] = 1;
     
@@ -31,7 +43,7 @@ bool bfs_detect(int node, vector<int> adj[], vector<int> &visited) {
     return false;
 }
 
-bool detect_cycle(vector<int> adj[], int V) {
+bool detect_cycle_bfs(vector<int> adj[], int V) { // TC: O(V + 2E) + O(N) -> for component loop, SC: O(N) + O(N), for 'queue' and 'visited'
     vector<int> vis(V, 0);
     for(int i = 0;i<V;i++) {
         if(!vis[i]) {
@@ -41,9 +53,21 @@ bool detect_cycle(vector<int> adj[], int V) {
     return false; 
 }
 
+
+bool detect_cycle_dfs(vector<int> adj[], int V) { // TC: O(V + 2E) + O(N) -> for component loop, SC: O(N) + O(N), for 'queue' and 'visited'
+    vector<int> vis(V, 0);
+    for(int i = 0;i<V;i++) {
+        if(!vis[i]) {
+            if(dfs_detect(i, -1, adj, vis))
+                return true; 
+        }
+    }
+    return false; 
+}
+
 int main() {
     // V = 4, E = 2
-    vector<int> adj[4] = {{}, {2,3}, {1, 3}, {2,3}}; // Cycle Present
+    vector<int> adj[4] = {{}, {2,3}, {1, 3}, {2,1}}; // Cycle Present
 
     cout << "Adjacency List:\n";
     for(int i = 0; i < 4; i++) {
@@ -53,6 +77,7 @@ int main() {
         cout << endl;
     }
 
-    cout << "\nCycle Present?\n" << (detect_cycle(adj, 4) ? "YES" : "NO");
+    cout << "\nCycle Present (bfs)?\n" << (detect_cycle_bfs(adj, 4) ? "YES" : "NO");
+    cout << "\nCycle Present (dfs)?\n" << (detect_cycle_dfs(adj, 4) ? "YES" : "NO");
     return 0;
 }
