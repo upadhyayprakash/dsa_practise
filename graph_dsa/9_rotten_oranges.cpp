@@ -17,7 +17,7 @@ using namespace std;
  * 3. 'visited' -> Initialize a visited matrix with '0' and mark all 'visited' nodes as '2' when traversing.
  * 4. At the end, compare original 'grid' matrix with rotten 'result' matrix and return 
  */
-int days_for_rotten_orange(vector<vector<int>> &grid) {
+int days_for_rotten_orange(vector<vector<int>> &grid) { // TC: O(m x n), SC: O(m x n)
     int m = grid.size();
     int n = grid[0].size();
     int visited[m][n];
