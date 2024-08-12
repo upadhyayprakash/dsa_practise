@@ -1,4 +1,2 @@
-Original:
-This is an amazing program
-Reversed:
-program amazing an is This
+Pattern exists?
+YES
