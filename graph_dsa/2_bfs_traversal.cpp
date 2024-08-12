@@ -36,7 +36,6 @@ vector<int> traverse_bfs(int n, vector<int> adjL[]) { // Time Complexity: O(N) +
 int main() {
     // Adjacency 'Matrix': using 2-D array. Space used: O(N x N)
     int n = 5;
-    int m = 6;
     vector<pair<int, int>> edges = {
         {1, 3},
         {2, 4},

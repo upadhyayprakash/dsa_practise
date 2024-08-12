@@ -22,7 +22,7 @@ void traverse_dfs(int node, vector<int> adjL[], vector<int> &visited, vector<int
 int main() {
     // Adjacency 'Matrix': using 2-D array. Space used: O(N x N)
     int n = 5;
-    int m = 6;
+
     vector<pair<int, int>> edges = {
         {1, 3},
         {2, 4},
