@@ -1,7 +1,7 @@
 /**
  * Count number of provinces in a given graph. A graph can have multiple components.
  * YouTube(Striver's): https://www.youtube.com/watch?v=ACzkVtewUYA
- * Pattern: graph, dfs, bfs
+ * Pattern: graph, dfs/bfs
  */
 
 #include <iostream>
