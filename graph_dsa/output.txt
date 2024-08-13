@@ -1,12 +1,1 @@
-Original Grid:
-1 1 0 0 0 
-1 1 0 0 0 
-0 0 0 0 0 
-0 0 0 1 1 
-
-Set Contents:
-0:0 0:1 
-0:0 0:1 1:0 1:1 
-
-Distinct Islands:
-2
+4 5 0 2 3 1 
