@@ -81,6 +81,8 @@
       LeetCode: https://leetcode.com/discuss/interview-question/397524/
    5. [DONE] Count Island in 2D Matrix
       YouTube: https://www.youtube.com/watch?v=muncqlKJrH0
+   6. [DONE] Detect cycle in directed graph
+      YouTube: https://www.youtube.com/watch?v=9twcmtQj4DU
 
 # LinkedList
 
@@ -89,10 +91,10 @@
    2. Detect Loop in Linked List
       YouTube: https://youtu.be/wiOo4DC5GGA?si=joosbSTAmHSO8CYg
 
-   4. Length of Loop in LinkedList
+   3. Length of Loop in LinkedList
       YouTube: https://youtu.be/I4g1qbkTPus?si=V221tB4j6SegkZJU
    
-   5. Max Rectangle of 1s
+   4. Max Rectangle of 1s
       LeetCode: https://leetcode.com/problems/maximal-rectangle/description/
 
 # Stack/Queues

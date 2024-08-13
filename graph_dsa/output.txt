@@ -1,8 +1,2 @@
-Original Grid:
-0 1 1 0 
-0 1 1 0 
-0 0 1 0 
-0 0 0 0 
-1 1 0 1 
-Distinct Islands:
-3
+Is cycle present?
+YES
