@@ -71,7 +71,7 @@
       YouTube: https://youtu.be/F_DDzYnxO14?si=0Ba16grsn4qKx64I
 
 # Graphs
-   1. Course Schedule-1 and 2 (Pre-requisite: Topo Sort in Directed Graphs)
+   1. [DONE] Course Schedule-1 and 2 (Pre-requisite: Topo Sort in Directed Graphs)
       YouTube: https://youtu.be/WAOfKpxYHR8?si=4kx9XgOqppkz8wHE
    2. Clone a Graph
       YouTube: https://www.youtube.com/watch?v=mQeF6bN8hMk
