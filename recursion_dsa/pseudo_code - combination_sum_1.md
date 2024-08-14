@@ -32,7 +32,7 @@ Following is the pseudo code for the recursive function call.
         // Recursive Call
         
         // pick
-        IF target <= arr[idx] THEN
+        IF arr[idx] <= target THEN
             ds.push_back(arr[idx]);
             CALL combination_sum_1(idx, arr, n, target-arr[idx], ds, ans) -> recursively
         
