@@ -31,6 +31,11 @@ void combination_sum_brute_force(int i, int target, vector<int> &arr, int n, vec
     combination_sum_brute_force(i+1, target, arr, n, ds, ans);
 }
 
+
+/**
+ * TC: O(2^N x K), k is combination sequence length
+ * SC: O(K x X), k is combination sequence length and 'X' is number of combinations
+ */
 void combination_sum_optimal(int ind, int target, vector<int> &arr, int n, vector<int> &ds, vector<vector<int>> &ans) {
     // Base Condition: when target is '0', ds already has combination, add to 'ans'
     if(target == 0) {
