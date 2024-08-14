@@ -31,11 +31,9 @@ void combination_sum(int i, int target, vector<int> &arr, int n, vector<int> &ds
 
 int main() {
     vector<int> arr = {2,3,6,7};
-    int target = 13;
-    vector<vector<int>> ans; // store final sequence of unique combinations
-    vector<int> ds; // store each combination of integers
     int n = arr.size();
-
+    int target = 13;
+    
     cout << "Input Array:\n";
     for(auto i: arr) {
         cout << i << " ";
@@ -43,6 +41,9 @@ int main() {
 
     cout << "\nTarget:\n" << target << endl;
 
+    vector<vector<int>> ans; // store final sequence of unique combinations
+    vector<int> ds; // store each combination of integers
+    
     combination_sum(0, target, arr, n, ds, ans);
 
     cout << "Unique combinations:\n";

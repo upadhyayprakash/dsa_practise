@@ -1,11 +1,14 @@
 Input Array:
-2 3 6 7 
+10 1 2 7 6 1 5 
 Target:
-13
-Unique combinations:
-2, 2, 2, 2, 2, 3, 
-2, 2, 2, 7, 
-2, 2, 3, 3, 3, 
-2, 2, 3, 6, 
-3, 3, 7, 
-6, 7, 
+8
+Unique combinations(brute):
+1, 1, 6, 
+1, 2, 5, 
+1, 7, 
+2, 6, 
+Unique combinations(optimal):
+1, 1, 6, 
+1, 2, 5, 
+1, 7, 
+2, 6, 
