@@ -1,6 +1,7 @@
 /**
  * Given a linked list where every node has 'next' and 'random' pointer. Clone this linked list.
  * YouTube(Striver's): https://www.youtube.com/watch?v=q570bKdrnlw
+ * Pattern: linked-list, hashmap
  */
 
 #include <iostream>

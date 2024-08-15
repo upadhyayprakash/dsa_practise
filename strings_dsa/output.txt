@@ -1,2 +1,2 @@
-Pattern exists?
-YES
+Largest Odd substring:
+3543
