@@ -1,0 +1,9 @@
+Insert 'Prakash' to Trie:
+Does 'Prakash' exist in Trie?
+YES
+Insert 'Pramod' in Trie:
+Does prefix 'Pram' exist in Trie?
+YES
+Insert 'Rakesh' in Trie:
+Does prefix 'Rak' exist in Trie?
+YES
